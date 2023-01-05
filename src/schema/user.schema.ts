@@ -1,5 +1,5 @@
 import { z } from "zod";
-export const constUserSchema = z.object({
+export const createUserSchema = z.object({
   body: z
     .object({
       name: z.string({
