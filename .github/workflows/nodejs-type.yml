@@ -24,7 +24,7 @@ jobs:
             ${{ runner.os }}-node-
       - name: yarn add, build, and test
         run: |
-          yarn ci
+          yarn install --immutable --immutable-cache --check-cache
           yarn dev
         env:
           CI: true
