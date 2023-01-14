@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { validateUserPassword } from "../services/user.service";
 import { createSession } from "../services/session.service";
+import { Jwt } from "jsonwebtoken";
 export async function createUserSessionHadler(req: Request, res: Response) {
   //validate the user's password
   const user = await validateUserPassword(req.body);
